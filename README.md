@@ -15,6 +15,7 @@ https://shrey-Bish.github.io/expense-tracker/
 <p align="center">
   <img src="./screenshots/dashboard.png" width="700" />
 </p>
+
 ---
 
 ## Features
