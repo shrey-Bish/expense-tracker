@@ -15,7 +15,9 @@ https://shrey-Bish.github.io/expense-tracker/
 <p align="center">
   <img src="./screenshots/dashboard.png" width="700" />
 </p>
-## ✨ Features
+---
+
+## Features
 
 * Add, edit, and delete expenses
 * Filter by category
@@ -27,7 +29,7 @@ https://shrey-Bish.github.io/expense-tracker/
 
 ---
 
-## 🧠 Architecture
+## Architecture
 
 The app follows a layered structure:
 
@@ -40,7 +42,7 @@ All business logic lives inside the reducer and selectors, keeping components cl
 
 ---
 
-## 💾 Data Storage
+## Data Storage
 
 Expenses are stored in `localStorage` using a versioned schema:
 
@@ -52,7 +54,7 @@ Amounts are stored as integer cents to avoid floating-point precision issues.
 
 ---
 
-## 🚀 How It Works
+## How It Works
 
 1. App initializes and loads expenses from localStorage.
 2. Reducer manages all state transitions.
@@ -62,7 +64,7 @@ Amounts are stored as integer cents to avoid floating-point precision issues.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * React
 * TypeScript
@@ -71,7 +73,7 @@ Amounts are stored as integer cents to avoid floating-point precision issues.
 
 ---
 
-## 📦 Running Locally
+## Running Locally
 
 ```bash
 npm install

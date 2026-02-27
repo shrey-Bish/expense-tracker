@@ -95,7 +95,7 @@ export function ExpenseForm() {
             className={`input ${errors.title ? "input--error" : ""}`}
             value={draft.title}
             onChange={(e) => set("title", e.target.value)}
-            placeholder="e.g., Groceries at Trader Joe’s"
+            placeholder="e.g., Groceries shopping from walmart’s"
             maxLength={80}
           />
           {errors.title && <div className="error">{errors.title}</div>}
@@ -109,7 +109,7 @@ export function ExpenseForm() {
             className={`input ${errors.amount ? "input--error" : ""}`}
             value={draft.amount}
             onChange={(e) => set("amount", e.target.value)}
-            placeholder="e.g., 22"
+            placeholder="e.g., 45"
           />
           {errors.amount && <div className="error">{errors.amount}</div>}
         </div>
@@ -149,7 +149,7 @@ export function ExpenseForm() {
             className="input input--textarea"
             value={draft.description}
             onChange={(e) => set("description", e.target.value)}
-            placeholder="Optional notes (merchant, reason, etc.)"
+            placeholder="Optional notes"
             maxLength={200}
           />
         </div>
