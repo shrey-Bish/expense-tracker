@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+# Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✨ Features
 
-Currently, two official plugins are available:
+* Add, edit, and delete expenses
+* Filter by category
+* Search expenses
+* Sort by date, title, or amount
+* Summary dashboard (Total, Entries, Average)
+* Responsive layout
+* Modal-based expense management(pop-up)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🧠 Architecture
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The app follows a layered structure:
 
-## Expanding the ESLint configuration
+* **Domain Layer** → Expense model + validation
+* **State Layer** → Reducer + Context
+* **UI Layer** → Modular components
+* **Persistence Layer** → LocalStorage abstraction
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+All business logic lives inside the reducer and selectors, keeping components clean and declarative.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 💾 Data Storage
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Expenses are stored in `localStorage` using a versioned schema:
+
+```
+expense-tracker:v1
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Amounts are stored as integer cents to avoid floating-point precision issues.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 How It Works
+
+1. App initializes and loads expenses from localStorage.
+2. Reducer manages all state transitions.
+3. Selectors compute filtered/sorted views.
+4. Modal handles Add/Edit operations.
+5. State updates automatically persist to localStorage.
+
+---
+
+## 🛠 Tech Stack
+
+* React
+* TypeScript
+* Vite
+* CSS (custom styling)
+
+---
+
+## 📦 Running Locally
+
+```bash
+npm install
+npm run dev
 ```
+---
