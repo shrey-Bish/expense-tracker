@@ -1,5 +1,5 @@
 // src/ui/components/ThemeToggle.tsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 /**
  * Simple accessible toggle that persists theme to localStorage and

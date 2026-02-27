@@ -1,5 +1,5 @@
 // src/ui/components/ExpenseList.tsx
-import React, { useMemo } from "react";
+import  { useMemo } from "react";
 import { useExpenseStore } from "../../state/ExpenseContext";
 import { selectVisibleExpenses } from "../../state/selectors";
 import { centsToDollars } from "../../domain/expense";

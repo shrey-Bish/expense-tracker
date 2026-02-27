@@ -1,5 +1,5 @@
 // src/ui/components/SummaryCards.tsx
-import React from "react";
+
 import { selectTotals } from "../../state/selectors";
 import { useExpenseStore } from "../../state/ExpenseContext";
 import { WalletIcon, ChartIcon, TagIcon } from "./icons";

@@ -1,5 +1,5 @@
 // src/app/App.tsx
-import React from "react";
+
 import { ExpenseProvider } from "../state/ExpenseContext";
 import { AppShell } from "../ui/components/AppShell";
 import { SummaryCards } from "../ui/components/SummaryCards";

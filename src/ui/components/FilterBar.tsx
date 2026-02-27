@@ -1,4 +1,4 @@
-import React from "react";
+
 import { CATEGORIES } from "../../domain/expense";
 import { useExpenseStore } from "../../state/ExpenseContext";
 import type { CategoryFilter, SortKey } from "../../domain/expense";

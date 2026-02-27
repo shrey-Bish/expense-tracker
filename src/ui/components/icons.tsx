@@ -1,5 +1,5 @@
 // src/ui/components/icons.tsx
-import React from "react";
+
 
 export const WalletIcon = ({ className = "" }: { className?: string }) => (
   <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
