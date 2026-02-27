@@ -13,7 +13,7 @@ https://shrey-Bish.github.io/expense-tracker/
 
 ### Add Expense
 <p align="center">
-  <img src="./screenshots/dashboard.png" width="700" />
+  <img src="./screenshots/expense.png" width="700" />
 </p>
 
 ---
