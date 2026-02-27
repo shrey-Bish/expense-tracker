@@ -27,7 +27,7 @@ export function Modal({
         <div className="modal-head">
           <div>
             <div className="modal-title">{title}</div>
-            <div className="modal-subtitle">Fill details and save. Validation is applied automatically.</div>
+            <div className="modal-subtitle">Fill details and save.</div>
           </div>
 
           <button ref={closeBtnRef} className="icon-btn" onClick={onClose} aria-label="Close">
