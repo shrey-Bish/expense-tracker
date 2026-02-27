@@ -1,5 +1,20 @@
 # Expense Tracker
+## Live Demo
+https://shrey-Bish.github.io/expense-tracker/
 
+---
+
+## Screenshots
+
+### Dashboard
+<p align="center">
+  <img src="./screenshots/dashboard.png" width="700" />
+</p>
+
+### Add Expense
+<p align="center">
+  <img src="./screenshots/dashboard.png" width="700" />
+</p>
 ## ✨ Features
 
 * Add, edit, and delete expenses
