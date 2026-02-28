@@ -1,4 +1,4 @@
-
+// src/ui/components/EmptyState.tsx
 
 export function EmptyState({
   title,
@@ -8,10 +8,10 @@ export function EmptyState({
   description: string;
 }) {
   return (
-    <div className="empty">
-      <div className="empty__icon" aria-hidden="true">🧾</div>
-      <div className="empty__title">{title}</div>
-      <div className="empty__desc">{description}</div>
+    <div className="table-empty">
+      <div className="empty-illustration" aria-hidden="true">🧾</div>
+      <div className="empty-title">{title}</div>
+      <p className="empty-desc">{description}</p>
     </div>
   );
 }
