@@ -49,7 +49,7 @@ function DashboardPage() {
       showToast("Expense deleted", "error");
     } else if (curr !== prev && curr.length === prev.length) {
       // Same length but different reference = an update happened
-      const hasUpdate = curr.some((e, i) => {
+      const hasUpdate = curr.some((e) => {
         const match = prev.find((p) => p.id === e.id);
         return match && match.updatedAt !== e.updatedAt;
       });
